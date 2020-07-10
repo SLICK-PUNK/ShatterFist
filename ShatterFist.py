@@ -82,7 +82,7 @@ print('''
 ░░░░░       ░░░░░ ░░░░░░     ░░░░░                           
                                          ''')
 prRed("                          -SlickPunk")
-print ('''The All in One Tool To Generate and Run payloads!''')  
+print ('''The All in One Tool To Generate Payloads!''')  
 
       
 def install():
@@ -258,8 +258,7 @@ def choice2():
                   
 prGreen ("The All in One Tool To Generate and Run payloads!")
 print ('''What Do You Want To Do Now?
-       [1] Make A Payload 
-       [2] Exploit Payload 
+       [1] Make A Payload  
        [0] Exit ''' )
 des1 = input() 
 if des1 == '1':
