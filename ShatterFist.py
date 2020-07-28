@@ -86,10 +86,10 @@ print ('''The All in One Tool To Generate Payloads!''')
 
       
 def install():
-    os.system('''cd $HOME && apt update && apt update --fix-missing && apt upgrade -y && pkg install git curl wget nmap -y && curl -LO raw.githubusercontent.com/Hax4us/Metasploit_termux/master/metasploit.sh && chmod 777 metasploit.sh && ./metasploit.sh && cd $HOME &&
+    os.system('''cd $HOME && apt update && apt update --fix-missing && apt upgrade -y && pkg install git curl wget nmap -y && pkg install unstable-repo && pkg install metasploit cd $HOME &&
               apt install perl libllvm protobuf c-ares libltdl glib libandroid-shmem libicu libyaml autoconf bison clang coreutils curl findutils apr apr-util postgresql openssl readline libffi libgmp libpcap libsqlite libgrpc libtool libxml2 libxslt ncurses make ruby ncurses-utils ncurses git wget unzip zip tar termux-tools termux-elf-cleaner resolv-conf pkg-config -y
               && pip install wheel && pip install lxml && python3 -m pip install requests && cd $HOME && git clone https://github.com/Hax4us/Apkmod.git
-              cd apkmod && chmod 777 setup.sh && ./setup.sh && cd $HOME && apkmod -u ''')
+              cd apkmod && chmod 777 setup.sh &&  ./setup.sh && cd $HOME && apkmod -u ''')
               
               
 ins = input('''Do you want to install all required dependencies and packages? This will also install additional packages so you can install \n any tool without errors ^w^ y/n
